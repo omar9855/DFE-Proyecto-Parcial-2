@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>TODO List App</title>
+</head>
+<body>
+    <div class="container">
+        <h1>TODO List</h1>
+        <div class="task-form">
+            <input type="text" id="title" placeholder="Título de la tarea">
+            <textarea id="description" placeholder="Descripción de la tarea"></textarea>
+            <select id="status">
+                <option value="Pendiente">Pendiente</option>
+                <option value="Completada">Completada</option>
+            </select>
+            <select id="priority">
+                <option value="Alta">Alta</option>
+                <option value="Media">Media</option>
+                <option value="Baja">Baja</option>
+            </select>
+            <input type="text" id="tag" placeholder="Etiqueta">
+            <input type="date" id="dueDate">
+            <button id="addTask" class="add-button">Agregar Tarea</button>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Título</th>
+                    <th>Descripción</th>
+                    <th>Estado</th>
+                    <th>Prioridad</th>
+                    <th>Etiqueta</th>
+                    <th>Fecha de Vencimiento</th>
+                    <th>Editar</th>
+                    <th>Eliminar</th>
+                </tr>
+            </thead>
+            <tbody id="taskList">
+                <!-- Las tareas se agregarán aquí dinámicamente -->
+            </tbody>
+        </table>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

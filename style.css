@@ -1,0 +1,109 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+h1 {
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+}
+
+.task-form {
+    margin: 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.task-form input,
+.task-form textarea,
+.task-form select,
+.task-form button {
+    margin: 5px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.task-form input[type="date"] {
+    width: 200px;
+}
+
+button#addTask {
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th, table td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+table th {
+    background-color: #333;
+    color: white;
+}
+
+table td {
+    background-color: #f9f9f9;
+}
+
+table td.actions {
+    background-color: transparent;
+}
+
+/* Estilo para el botón deshabilitado */
+.add-button:disabled {
+    background-color: #e92626; /* Color de fondo gris */
+    cursor: not-allowed; /* Cambia el cursor a "no permitido" */
+}
+
+
+/* Estilo para el botón habilitado */
+.add-button:not(:disabled) {
+    background-color: #007bff; /* Color de fondo normal */
+    color: #fff; /* Cambia el color del texto a blanco */
+    cursor: pointer; /* Cambia el cursor a "puntero" */
+}
+
+
+
+
+/* Agrega este código CSS a tu archivo style.css o en una etiqueta <style> dentro del HTML */
+button.edit-button,
+button.delete-button {
+    padding: 8px 16px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button.edit-button:hover,
+button.delete-button:hover {
+    background-color: #0056b3;
+}
