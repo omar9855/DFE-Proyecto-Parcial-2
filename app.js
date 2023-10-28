@@ -9,7 +9,7 @@ const tagInput = document.getElementById('tag');
 const dueDateInput = document.getElementById('dueDate');
 
 addTaskButton.addEventListener('click', () => {
-    // Verifica si los campos son válidos y aplica el estilo rojo si es necesario
+
     const isTitleValid = taskTitleInput.value.trim() !== '';
     const isDescriptionValid = taskDescriptionInput.value.trim() !== '';
     const isStatusValid = statusInput.value.trim() !== '';
@@ -65,7 +65,7 @@ addTaskButton.addEventListener('click', () => {
         dueDateInput.style.border = '1px solid #ccc';
     }
 
-    // Verifica si todos los campos requeridos tienen datos válidos
+
     const allFieldsValid = isTitleValid && isDescriptionValid && isStatusValid && isPriorityValid && isTagValid && isDueDateValid;
 
     if (allFieldsValid) {
@@ -149,7 +149,7 @@ function createTask(task) {
     const editCell = newRow.insertCell(6);
     const editButton = document.createElement('button');
     editButton.textContent = 'Editar';
-    editButton.classList.add('edit-button'); // Agregar la clase 'edit-button' para estilos
+    editButton.classList.add('edit-button'); 
     editButton.addEventListener('click', () => {
         editTask(task.id, newRow);
     });
@@ -158,8 +158,8 @@ function createTask(task) {
     const deleteCell = newRow.insertCell(7);
     const deleteButton = document.createElement('button');
     deleteButton.textContent = 'Eliminar';
-    deleteButton.classList.add('delete-button'); // Agregar la clase 'delete-button' para estilos
-    deleteButton.style.backgroundColor = 'red'; // Establecer el fondo del botón Eliminar a rojo
+    deleteButton.classList.add('delete-button'); 
+    deleteButton.style.backgroundColor = 'red'; 
     deleteButton.addEventListener('click', () => {
         deleteTask(task.id, newRow);
     });
@@ -176,8 +176,8 @@ function editTask(taskId, row) {
 
     titleCell.contentEditable = true;
     descriptionCell.contentEditable = true;
-    statusCell.contentEditable = true; // Cambio a contentEditable
-    priorityCell.contentEditable = true; // Cambio a contentEditable
+    statusCell.contentEditable = true;
+    priorityCell.contentEditable = true; 
     tagCell.contentEditable = true;
     dueDateCell.contentEditable = true;
 

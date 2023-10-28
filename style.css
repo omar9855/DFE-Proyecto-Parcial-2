@@ -74,24 +74,7 @@ table td.actions {
     background-color: transparent;
 }
 
-/* Estilo para el botón deshabilitado */
-.add-button:disabled {
-    background-color: #e92626; /* Color de fondo gris */
-    cursor: not-allowed; /* Cambia el cursor a "no permitido" */
-}
 
-
-/* Estilo para el botón habilitado */
-.add-button:not(:disabled) {
-    background-color: #007bff; /* Color de fondo normal */
-    color: #fff; /* Cambia el color del texto a blanco */
-    cursor: pointer; /* Cambia el cursor a "puntero" */
-}
-
-
-
-
-/* Agrega este código CSS a tu archivo style.css o en una etiqueta <style> dentro del HTML */
 button.edit-button,
 button.delete-button {
     padding: 8px 16px;
