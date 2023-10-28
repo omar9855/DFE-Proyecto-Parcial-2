@@ -81,20 +81,19 @@ function addTask() {
     const taskTag = tagInput.value;
     const taskDueDate = dueDateInput.value;
 
-    const requiredFields = [
-        { field: taskTitle, name: 'Título' },
-        { field: taskDescription, name: 'Descripción' },
-        { field: taskStatus, name: 'Estado' },
-        { field: taskPriority, name: 'Prioridad' },
-        { field: taskTag, name: 'Etiqueta' },
-        { field: taskDueDate, name: 'Fecha de vencimiento' }
-    ];
+    // Verifica todos los campos a la vez
+    const areFieldsEmpty = (
+        taskTitle.trim() === '' ||
+        taskDescription.trim() === '' ||
+        taskStatus.trim() === '' ||
+        taskPriority.trim() === '' ||
+        taskTag.trim() === '' ||
+        taskDueDate.trim() === ''
+    );
 
-    for (const { field, name } of requiredFields) {
-        if (field.trim() === '') {
-            alert(`El campo "${name}" es obligatorio.`);
-            return;
-        }
+    if (areFieldsEmpty) {
+        alert('Todos los campos son obligatorios.');
+        return;
     }
 
     const taskData = {
@@ -121,7 +120,6 @@ function addTask() {
     })
     .catch(error => console.error('Error al agregar tarea:', error));
 }
-
 
 function createTask(task) {
     const table = document.getElementById('taskList');
@@ -196,6 +194,20 @@ function saveTask(taskId, row) {
     const priorityCell = row.cells[3];
     const tagCell = row.cells[4];
     const dueDateCell = row.cells[5];
+
+    // Verifica todos los campos a la vez
+    const areFieldsEmpty = (
+        titleCell.textContent.trim() === '' ||
+        descriptionCell.textContent.trim() === '' ||
+        statusCell.textContent.trim() === '' ||
+        priorityCell.textContent.trim() === '' ||
+        tagCell.textContent.trim() === '' ||
+        dueDateCell.textContent.trim() === ''
+    );
+
+    if (areFieldsEmpty) {
+        return;
+    }
 
     titleCell.contentEditable = false;
     descriptionCell.contentEditable = false;
